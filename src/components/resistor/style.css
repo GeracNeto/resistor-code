@@ -1,0 +1,26 @@
+.master-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 80vh;
+    border: 1px solid;
+}
+
+.resistor{
+    display: flex;
+    justify-content: space-around;
+
+    width: 40%;
+    height: 25%;
+    background-color: blanchedalmond;
+}
+
+.box{
+    width: 8%;
+    height: 100%;
+    background-color: red;
+
+    margin: 0 2%;
+}

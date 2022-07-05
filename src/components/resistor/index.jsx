@@ -1,14 +1,15 @@
 import React from "react";
+import './style.css';
 
 
 export function Resistor(){
     return(
         <div className="master-container">
             <div className="resistor">
-                <div className="box-one"></div>
-                <div className="box-two"></div>
-                <div className="box-three"></div>
-                <div className="box-four"></div>
+                <div className="box"></div>
+                <div className="box"></div>
+                <div className="box"></div>
+                <div className="box"></div>
             </div>
         </div>
     );
