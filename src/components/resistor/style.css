@@ -26,6 +26,14 @@
     margin: 0 2%;
 }
 
+.box-black{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+
+    margin: 0 2%;
+}
+
 .box-color{
     display: flex;
     justify-content: space-around;
@@ -34,3 +42,4 @@
 
     margin-top: 1%;
 }
+
