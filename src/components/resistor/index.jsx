@@ -4,10 +4,10 @@ import './style.css';
 
 export function Resistor(){
 
-    const [colorOne, setColorOne] = useState('');
-    const [colorTwo, setColorTwo] = useState('');
-    const [colorThree, setColorThree] = useState('');
-    const [colorFour, setColorFour] = useState('');
+    const [colorOne, setColorOne] = useState();
+    const [colorTwo, setColorTwo] = useState();
+    const [colorThree, setColorThree] = useState();
+    const [colorFour, setColorFour] = useState();
 
     return(
         <div className="master-container">
