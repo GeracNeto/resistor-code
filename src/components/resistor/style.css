@@ -6,7 +6,6 @@
 
     width: 100vw;
     height: 80vh;
-    border: 1px solid;
 }
 
 .resistor{
@@ -23,9 +22,6 @@
 .box{
     width: 8%;
     height: 100%;
-
-
-    margin: 0 2%;
 }
 
 .select-color{
