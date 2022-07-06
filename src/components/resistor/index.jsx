@@ -12,6 +12,7 @@ export function Resistor(){
     const [resOne, setResOne] = useState();
     const [resTwo, setResTwo] = useState();
     const [resThree, setResThree] = useState();
+    const [resFour, setResFour] = useState();
 
     useEffect(() => {
         switch (colorOne) {
@@ -163,10 +164,57 @@ export function Resistor(){
 
     },[colorThree])
 
+    useEffect(() => {
+        switch (colorFour) {
+
+            case 'box brown':
+                setResFour(' ±1%')                                
+                break;
+
+            case 'box red':
+                setResFour(' ±2%')                                
+                break;
+
+            case 'box green':
+                setResFour(' ±0,5%')                                
+                break;
+
+            case 'box blue':
+                setResFour(' ±0,25%')                                
+                break;
+    
+            case 'box violet':
+                setResFour(' ±0,1%')                                
+                break;
+
+            case 'box gray':
+                setResFour(' ±0,05%')                                
+                break;
+
+            case 'box gold':
+                setResFour(' ±5%')                                
+                break;
+
+            case 'box silver':
+                setResFour(' ±10%')                                
+                break;
+
+            case 'box no-color':
+                setResFour(' ±20%')                                
+                break;
+
+
+            default:
+                setResFour(' ±5%')
+                break;
+        }
+
+    },[colorFour])
+
 
     return(
         <div className="master-container">
-            <h1>{resOne}{resTwo}{resThree} OHM</h1>
+            <h1>{resOne}{resTwo}{resThree}{resFour} OHM</h1>
             <div className="resistor">
                 <div className={colorOne}></div>
                 <div className={colorTwo}></div>
@@ -215,6 +263,12 @@ export function Resistor(){
                 </select>
 
                 <select onChange={e => setColorFour(e.target.value)}>
+                    <option value="box brown">Brown</option>
+                    <option value="box red">Red</option>
+                    <option value="box green">Green</option>
+                    <option value="box blue">Blue</option>
+                    <option value="box violet">Violet</option>
+                    <option value="box gray">Gray</option>
                     <option value="box gold">Gold</option>
                     <option value="box silver">Silver</option>
                     <option value="box no-color">No-color</option>
