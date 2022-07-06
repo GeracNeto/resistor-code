@@ -214,7 +214,9 @@ export function Resistor(){
 
     return(
         <div className="master-container">
+
             <h1>{resOne}{resTwo}{resThree}{resFour} OHM</h1>
+            
             <div className="resistor">
                 <div className={colorOne}></div>
                 <div className={colorTwo}></div>
