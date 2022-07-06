@@ -4,64 +4,220 @@ import './style.css';
 
 export function Resistor(){
 
-    const [colorOne, setColorOne] = useState();
-    const [colorTwo, setColorTwo] = useState();
-    const [colorThree, setColorThree] = useState();
-    const [colorFour, setColorFour] = useState();
+    const [colorOne, setColorOne] = useState('box black');
+    const [colorTwo, setColorTwo] = useState('box brown');
+    const [colorThree, setColorThree] = useState('box red');
+    const [colorFour, setColorFour] = useState('box gold');
+
+    const [resOne, setResOne] = useState();
+    const [resTwo, setResTwo] = useState();
+    const [resThree, setResThree] = useState();
+
+    useEffect(() => {
+        switch (colorOne) {
+
+            case 'box black':
+                setResOne('0')                                
+                break;
+
+            case 'box brown':
+                setResOne('1')                                
+                break;
+
+            case 'box red':
+                setResOne('2')                                
+                break;
+
+            case 'box orange':
+                setResOne('3')                                
+                break;
+
+            case 'box yellow':
+                setResOne('4')                                
+                break;
+
+            case 'box green':
+                setResOne('5')                                
+                break;
+
+            case 'box blue':
+                setResOne('6')                                
+                break;
+    
+            case 'box violet':
+                setResOne('7')                                
+                break;
+
+            case 'box gray':
+                setResOne('8')                                
+                break;
+    
+            case 'box white':
+                setResOne('9')                                
+                break;
+
+            default:
+                setResOne('0')
+                break;
+        }
+
+    },[colorOne])
+
+    useEffect(() => {
+        switch (colorTwo) {
+
+            case 'box black':
+                setResTwo('0')                                
+                break;
+
+            case 'box brown':
+                setResTwo('1')                                
+                break;
+
+            case 'box red':
+                setResTwo('2')                                
+                break;
+
+            case 'box orange':
+                setResTwo('3')                                
+                break;
+
+            case 'box yellow':
+                setResTwo('4')                                
+                break;
+
+            case 'box green':
+                setResTwo('5')                                
+                break;
+
+            case 'box blue':
+                setResTwo('6')                                
+                break;
+    
+            case 'box violet':
+                setResTwo('7')                                
+                break;
+
+            case 'box gray':
+                setResTwo('8')                                
+                break;
+    
+            case 'box white':
+                setResTwo('9')                                
+                break;
+
+            default:
+                setResTwo('0')
+                break;
+        }
+
+    },[colorTwo])
+
+    useEffect(() => {
+        switch (colorThree) {
+
+            case 'box black':
+                setResThree('0')                                
+                break;
+
+            case 'box brown':
+                setResThree('0')                                
+                break;
+
+            case 'box red':
+                setResThree('00')                                
+                break;
+
+            case 'box orange':
+                setResThree('000')                                
+                break;
+
+            case 'box yellow':
+                setResThree('0000')                                
+                break;
+
+            case 'box green':
+                setResThree('00000')                                
+                break;
+
+            case 'box blue':
+                setResThree('000000')                                
+                break;
+    
+            case 'box violet':
+                setResThree('0000000')                                
+                break;
+
+            case 'box gray':
+                setResThree('00000000')                                
+                break;
+    
+            case 'box white':
+                setResThree('000000000')                                
+                break;
+
+            default:
+                setResThree('0')
+                break;
+        }
+
+    },[colorThree])
+
 
     return(
         <div className="master-container">
+            <h1>{resOne}{resTwo}{resThree} OHM</h1>
             <div className="resistor">
-                <div className='box'>{colorOne}</div>
-                <div className="box">{colorTwo}</div>
-                <div className="box">{colorThree}</div>
-                <div className="box">{colorFour}</div>
+                <div className={colorOne}></div>
+                <div className={colorTwo}></div>
+                <div className={colorThree}></div>
+                <div className={colorFour}></div>
             </div>
 
             <div className="select-color">
                 <select onChange={e => setColorOne(e.target.value)}>
-                    <option value="one-black">Black</option>
-                    <option value="one-brown">Brown</option>
-                    <option value="one-red">Red</option>
-                    <option value="one-orange">Orange</option>
-                    <option value="one-yellow">Yellow</option>
-                    <option value="one-green">Green</option>
-                    <option value="one-blue">Blue</option>
-                    <option value="one-pink">Pink</option>
-                    <option value="one-gray">Gray</option>
-                    <option value="one-white">White</option>
+                    <option value="box black">Black</option>
+                    <option value="box brown">Brown</option>
+                    <option value="box red">Red</option>
+                    <option value="box orange">Orange</option>
+                    <option value="box yellow">Yellow</option>
+                    <option value="box green">Green</option>
+                    <option value="box blue">Blue</option>
+                    <option value="box violet">Violet</option>
+                    <option value="box gray">Gray</option>
+                    <option value="box white">White</option>
                 </select>
 
                 <select onChange={e => setColorTwo(e.target.value)}>
-                    <option value="two-black">Black</option>
-                    <option value="two-brown">Brown</option>
-                    <option value="two-red">Red</option>
-                    <option value="two-orange">Orange</option>
-                    <option value="two-yellow">Yellow</option>
-                    <option value="two-green">Green</option>
-                    <option value="two-blue">Blue</option>
-                    <option value="two-pink">Pink</option>
-                    <option value="two-gray">Gray</option>
-                    <option value="two-white">White</option>
+                    <option value="box black">Black</option>
+                    <option value="box brown">Brown</option>
+                    <option value="box red">Red</option>
+                    <option value="box orange">Orange</option>
+                    <option value="box yellow">Yellow</option>
+                    <option value="box green">Green</option>
+                    <option value="box blue">Blue</option>
+                    <option value="box violet">Violet</option>
+                    <option value="box gray">Gray</option>
+                    <option value="box white">White</option>
                 </select>
 
                 <select onChange={e => setColorThree(e.target.value)}>
-                    <option value="three-black">Black</option>
-                    <option value="three-brown">Brown</option>
-                    <option value="three-red">Red</option>
-                    <option value="three-orange">Orange</option>
-                    <option value="three-yellow">Yellow</option>
-                    <option value="three-green">Green</option>
-                    <option value="three-blue">Blue</option>
-                    <option value="three-pink">Pink</option>
-                    <option value="three-gray">Gray</option>
-                    <option value="three-white">White</option>
+                    <option value="box black">Black</option>
+                    <option value="box brown">Brown</option>
+                    <option value="box red">Red</option>
+                    <option value="box orange">Orange</option>
+                    <option value="box yellow">Yellow</option>
+                    <option value="box green">Green</option>
+                    <option value="box blue">Blue</option>
+                    <option value="box violet">Violet</option>
+                    <option value="box gray">Gray</option>
+                    <option value="box white">White</option>
                 </select>
 
                 <select onChange={e => setColorFour(e.target.value)}>
-                    <option value="four-gold">Gold</option>
-                    <option value="four-silver">Silver</option>
-                    <option value="four-no-color">No-color</option>
+                    <option value="box gold">Gold</option>
+                    <option value="box silver">Silver</option>
+                    <option value="box no-color">No-color</option>
                 </select>
             </div>
         </div>
