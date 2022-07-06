@@ -14,9 +14,34 @@ export function Resistor(){
     const [resThree, setResThree] = useState();
     const [resFour, setResFour] = useState();
 
-    let text = resOne + resTwo + resThree + resFour + ' Ohm';
+    let textValues = resOne + resTwo;
+    
+    let resThreeNumber = parseFloat(resThree);
 
-    console.log(text);
+    let operation = textValues * resThreeNumber;
+
+    let mult = operation.toFixed(2);
+
+    let result = mult.toString() + resFour + ' ohm';
+
+
+    if(mult > 1000 && mult <= 1000000){
+        mult = mult / 1000
+
+        result = mult.toString() + 'K' + resFour + ' ohm'
+    }
+
+    else if(mult > 1000000 && mult <= 1000000000){
+        mult = mult / 1000000
+
+        result = mult.toString() + 'M' + resFour + ' ohm'
+    }
+
+    else if(mult > 1000000000){
+        mult = mult / 1000000000
+        result = mult.toString() + 'G' + resFour + ' ohm'
+    }
+
 
     useEffect(() => {
         switch (colorOne) {
@@ -122,47 +147,55 @@ export function Resistor(){
         switch (colorThree) {
 
             case 'box black':
-                setResThree('0')                                
+                setResThree('1')                                
                 break;
 
             case 'box brown':
-                setResThree('0')                                
+                setResThree('10')                                
                 break;
 
             case 'box red':
-                setResThree('00')                                
+                setResThree('100')                                
                 break;
 
             case 'box orange':
-                setResThree('000')                                
+                setResThree('1000')                                
                 break;
 
             case 'box yellow':
-                setResThree('0000')                                
+                setResThree('10000')                                
                 break;
 
             case 'box green':
-                setResThree('00000')                                
+                setResThree('100000')                                
                 break;
 
             case 'box blue':
-                setResThree('000000')                                
+                setResThree('1000000')                                
                 break;
     
             case 'box violet':
-                setResThree('0000000')                                
+                setResThree('10000000')                                
                 break;
 
             case 'box gray':
-                setResThree('00000000')                                
+                setResThree('100000000')                                
                 break;
     
             case 'box white':
-                setResThree('000000000')                                
+                setResThree('1000000000')                                
+                break;
+
+            case 'box gold':
+                setResThree('0.1')                                
+                break;
+        
+            case 'box silver':
+                setResThree('0.01')                                
                 break;
 
             default:
-                setResThree('0')
+                setResThree('1')
                 break;
         }
 
@@ -219,7 +252,7 @@ export function Resistor(){
     return(
         <div className="master-container">
 
-            <h1>{text}</h1>
+            <h1>{result}</h1>
             
             <div className="resistor">
                 <div className={colorOne}></div>
@@ -266,6 +299,8 @@ export function Resistor(){
                     <option value="box violet">Violet</option>
                     <option value="box gray">Gray</option>
                     <option value="box white">White</option>
+                    <option value="box gold">Gold</option>
+                    <option value="box silver">Silver</option>
                 </select>
 
                 <select onChange={e => setColorFour(e.target.value)}>
