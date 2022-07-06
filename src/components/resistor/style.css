@@ -16,12 +16,14 @@
     width: 40%;
     height: 25%;
     background-color: blanchedalmond;
+    border-radius: 25px;
+    border: 0.5px solid rgb(189, 179, 165);
 }
 
 .box{
     width: 8%;
     height: 100%;
-    background-color: red;
+
 
     margin: 0 2%;
 }
