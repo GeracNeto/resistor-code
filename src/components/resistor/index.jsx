@@ -14,6 +14,10 @@ export function Resistor(){
     const [resThree, setResThree] = useState();
     const [resFour, setResFour] = useState();
 
+    let text = resOne + resTwo + resThree + resFour + ' Ohm';
+
+    console.log(text);
+
     useEffect(() => {
         switch (colorOne) {
 
@@ -215,7 +219,7 @@ export function Resistor(){
     return(
         <div className="master-container">
 
-            <h1>{resOne}{resTwo}{resThree}{resFour} OHM</h1>
+            <h1>{text}</h1>
             
             <div className="resistor">
                 <div className={colorOne}></div>
