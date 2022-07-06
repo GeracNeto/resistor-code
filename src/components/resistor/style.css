@@ -35,3 +35,56 @@
     margin-top: 1%;
 }
 
+/* Cores das faixas do resistor */
+
+.black{
+    background-color: black;
+}
+
+.brown{
+    background-color: brown;
+}
+
+.red{
+    background-color: red;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.gray{
+    background-color: gray;
+}
+
+.white{
+    background-color: white;
+}
+
+.gold{
+    background-color: gold;
+}
+
+.silver{
+    background-color: silver;
+}
+
+.no-color{
+    background-color: aliceblue;
+}
