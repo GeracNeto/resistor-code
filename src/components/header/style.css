@@ -1,0 +1,10 @@
+header{
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #059b9a;
+    color: #fff;
+}
+
+h1, h2{
+    margin: 0;
+}
