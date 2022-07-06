@@ -22,22 +22,22 @@ export function Resistor(){
 
     let mult = operation.toFixed(2);
 
-    let result = mult.toString() + resFour + ' ohm';
+    let result = mult.toString() + resFour + ' Ω';
 
 
     if(mult >= 1000 && mult < 1000000){
         mult = mult / 1000
-        result = mult.toString() + 'K' + resFour + ' ohm'
+        result = mult.toString() + 'K' + resFour + ' Ω'
     }
 
     else if(mult >= 1000000 && mult < 1000000000){
         mult = mult / 1000000
-        result = mult.toString() + 'M' + resFour + ' ohm'
+        result = mult.toString() + 'M' + resFour + ' Ω'
     }
 
     else if(mult >= 1000000000){
         mult = mult / 1000000000
-        result = mult.toString() + 'G' + resFour + ' ohm'
+        result = mult.toString() + 'G' + resFour + ' Ω'
     }
 
 
