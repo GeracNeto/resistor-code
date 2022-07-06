@@ -5,18 +5,20 @@
     align-items: center;
 
     width: 100vw;
-    height: 80vh;
+    height: 70vh;
 }
 
 .resistor{
     display: flex;
     justify-content: space-around;
 
-    width: 40%;
+    width: 35%;
     height: 25%;
     background-color: blanchedalmond;
     border-radius: 25px;
     border: 0.5px solid rgb(189, 179, 165);
+
+    margin-top: 1%;
 }
 
 .box{
@@ -28,7 +30,7 @@
     display: flex;
     justify-content: space-around;
 
-    width: 40%;
+    width: 35%;
 
     margin-top: 1%;
 }
