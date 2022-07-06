@@ -4,8 +4,8 @@ import './style.css';
 
 export function Resistor(){
 
-    const [colorOne, setColorOne] = useState('box black');
-    const [colorTwo, setColorTwo] = useState('box brown');
+    const [colorOne, setColorOne] = useState('box brown');
+    const [colorTwo, setColorTwo] = useState('box black');
     const [colorThree, setColorThree] = useState('box red');
     const [colorFour, setColorFour] = useState('box gold');
 
@@ -25,19 +25,19 @@ export function Resistor(){
     let result = mult.toString() + resFour + ' ohm';
 
 
-    if(mult > 1000 && mult <= 1000000){
+    if(mult >= 1000 && mult < 1000000){
         mult = mult / 1000
 
         result = mult.toString() + 'K' + resFour + ' ohm'
     }
 
-    else if(mult > 1000000 && mult <= 1000000000){
+    else if(mult >= 1000000 && mult < 1000000000){
         mult = mult / 1000000
 
         result = mult.toString() + 'M' + resFour + ' ohm'
     }
 
-    else if(mult > 1000000000){
+    else if(mult >= 1000000000){
         mult = mult / 1000000000
         result = mult.toString() + 'G' + resFour + ' ohm'
     }
@@ -213,19 +213,19 @@ export function Resistor(){
                 break;
 
             case 'box green':
-                setResFour(' ±0,5%')                                
+                setResFour(' ±0.5%')                                
                 break;
 
             case 'box blue':
-                setResFour(' ±0,25%')                                
+                setResFour(' ±0.25%')                                
                 break;
     
             case 'box violet':
-                setResFour(' ±0,1%')                                
+                setResFour(' ±0.1%')                                
                 break;
 
             case 'box gray':
-                setResFour(' ±0,05%')                                
+                setResFour(' ±0.05%')                                
                 break;
 
             case 'box gold':
@@ -264,7 +264,7 @@ export function Resistor(){
             <div className="select-color">
                 <select onChange={e => setColorOne(e.target.value)}>
                     <option value="box black">Black</option>
-                    <option value="box brown">Brown</option>
+                    <option value="box brown" selected>Brown</option>
                     <option value="box red">Red</option>
                     <option value="box orange">Orange</option>
                     <option value="box yellow">Yellow</option>
@@ -276,7 +276,7 @@ export function Resistor(){
                 </select>
 
                 <select onChange={e => setColorTwo(e.target.value)}>
-                    <option value="box black">Black</option>
+                    <option value="box black" selected>Black</option>
                     <option value="box brown">Brown</option>
                     <option value="box red">Red</option>
                     <option value="box orange">Orange</option>
@@ -291,7 +291,7 @@ export function Resistor(){
                 <select onChange={e => setColorThree(e.target.value)}>
                     <option value="box black">Black</option>
                     <option value="box brown">Brown</option>
-                    <option value="box red">Red</option>
+                    <option value="box red" selected>Red</option>
                     <option value="box orange">Orange</option>
                     <option value="box yellow">Yellow</option>
                     <option value="box green">Green</option>
@@ -310,7 +310,7 @@ export function Resistor(){
                     <option value="box blue">Blue</option>
                     <option value="box violet">Violet</option>
                     <option value="box gray">Gray</option>
-                    <option value="box gold">Gold</option>
+                    <option value="box gold" selected>Gold</option>
                     <option value="box silver">Silver</option>
                     <option value="box no-color">No-color</option>
                 </select>
