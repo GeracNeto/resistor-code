@@ -27,13 +27,11 @@ export function Resistor(){
 
     if(mult >= 1000 && mult < 1000000){
         mult = mult / 1000
-
         result = mult.toString() + 'K' + resFour + ' ohm'
     }
 
     else if(mult >= 1000000 && mult < 1000000000){
         mult = mult / 1000000
-
         result = mult.toString() + 'M' + resFour + ' ohm'
     }
 
