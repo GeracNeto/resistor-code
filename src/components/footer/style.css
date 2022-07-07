@@ -4,10 +4,8 @@ footer{
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 15vh;
 
-    font-size: 16px;
-
+    font-size: 14px;
 }
 
 .sociais{
@@ -20,9 +18,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20%;
 }
 
 .sociais img{
-    width: 20%;
+    width: 30px;
+    margin: 0 10px;
 }
