@@ -1,6 +1,7 @@
 import './style.css'
 
-export function Footer(){
+export const Footer = () => {
+    
     return(
         <footer>
             <h3>Desenvolvido por Geraldo Pereira da Costa Neto</h3>
