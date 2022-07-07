@@ -1,0 +1,21 @@
+button{
+    background-color:#059b9a;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 50px;
+    height: 30px;
+    margin-left: 2%;
+    text-transform: uppercase;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(15, 110, 110, 0.2);
+}
+
+
+button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(15, 110, 110, 0.2);
+}
