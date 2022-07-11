@@ -1,14 +1,18 @@
+// Resistor
+
 import React, { useEffect, useState } from "react";
 import './style.css';
 
 
 export function Resistor(){
 
+    // Estados para alterar as cores das faixas do resistor. O valor estado é a classe de cada faixa
     const [colorOne, setColorOne] = useState('box brown');
     const [colorTwo, setColorTwo] = useState('box black');
     const [colorThree, setColorThree] = useState('box red');
     const [colorFour, setColorFour] = useState('box gold');
 
+    // Estados para aleterar os valores de cada faixa de acordo com a cor correspondende
     const [resOne, setResOne] = useState();
     const [resTwo, setResTwo] = useState();
     const [resThree, setResThree] = useState();
@@ -22,9 +26,14 @@ export function Resistor(){
 
     let mult = operation.toFixed(2);
 
-    let result = mult.toString() + resFour + ' Ω';
+    let result = mult.toString() + resFour + ' Ω'; // result é a variável que contém a string na tela com o resultado final. 
 
-
+    // As condições verificam o valor do resistor e faz a seguinte troca para ficar em notação ciêntífica:
+    /*
+    1000 = K
+    1000000 = M
+    1000000000 = G
+    */
     if(mult >= 1000 && mult < 1000000){
         mult = mult / 1000
         result = mult.toString() + 'K' + resFour + ' Ω'
@@ -41,6 +50,7 @@ export function Resistor(){
     }
 
 
+    // Os useEffects abaixo identificam a mudança de cor de cada faixa e atualiza o valor do resistor de acordo com a faixa correspondende
     useEffect(() => {
         switch (colorOne) {
 

@@ -1,3 +1,5 @@
+// Footer da página
+
 import './style.css'
 
 export const Footer = () => {
